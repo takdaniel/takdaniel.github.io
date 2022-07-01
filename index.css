@@ -28,6 +28,18 @@ td{
     margin-right: 30px;
 }
 
+#save-btn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    color: white;
+    background-color: green;
+    width: 200px;
+    border-radius: 5px;
+    font-weight: bold;
+
+}
+
 #increase-btn {
     background-color: darkgreen;
     color: white;

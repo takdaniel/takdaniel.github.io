@@ -2,6 +2,10 @@ let daniPoints = document.getElementById("danipoints")
 
 let zsaniPoints = document.getElementById("zsanipoints")
 
+let matchEl = document.getElementById("match-el")
+
+
+
 let pointOfDani = 0
 
 let pointOfZsani = 0
@@ -25,4 +29,9 @@ function decreaseDaniPoints() {
 function decreaseZsaniPoints() {
     pointOfZsani = pointOfZsani - 1
     zsaniPoints.innerText = pointOfZsani
+}
+
+function showResult() {
+    matchEl.textContent += pointOfDani + " - " + pointOfZsani
+
 }
