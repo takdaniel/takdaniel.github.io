@@ -40,13 +40,13 @@ td{
 
 }
 
-#increase-btn {
+#increase-btn-dani, #increase-btn-zsani {
     background-color: darkgreen;
     color: white;
     font-weight: bold;
 }
 
-#decrease-btn {
+#decrease-btn-dani, #decrease-btn-zsani {
     background-color: darkred;
     color: white;
     font-weight: bold;
