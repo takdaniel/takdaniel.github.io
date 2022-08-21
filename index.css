@@ -51,6 +51,14 @@ td{
     color: white;
     font-weight: bold;
 }
+
+#reset-btn{
+    background-color: lightskyblue;
+    color: black;
+    font-weight: bold;
+}
+
+
 /* #point-block1, #point-block2{
     background-color: aqua;
     max-width: fit-content;
