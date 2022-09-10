@@ -1,66 +1,122 @@
-body{
-    background-image: url(fiat500.jpg);
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    color: #F51E1E;
-    background-size: cover;
+:root{
+    --green-btn-colour: #12c739; 
+    --red-btn-colour: #c61a09;
+    --teal-colour: #116c6e;
 }
 
-h1{
-    max-width: fit-content;
-    background-color: white;
-    align-content: center;
-    margin-left: 35%;
-    margin-right: 35%;
+@font-face {
+    font-family: MainFiatFont;
+    src: url(DenkOne.ttf);
+}
+
+.utility{
+    border: 1px solid blue;
+}
+
+body{
+    background-color: #dddddd;
+    font-family: MainFiatFont;
+    font-weight: bold;
+    color: #F51E1E;
+}
+
+img{
+    max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    background: linear-gradient(to top, #dddddd 0.85, transparent );
+}
+
+.img-wrapper{
+ text-align: center;
+}
+
+.title-wrapper{
+    margin-top: 20px;
+}
+
+.title{
+    font-size: 2.3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.point-block1{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 h2{
-    background-color: white;
-    align-content: center;
-    max-width: fit-content;
-   
-}
-
-td{
-    border: black 1px;
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
-#save-btn{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: none;
-    color: white;
-    background-color: green;
-    width: 200px;
-    border-radius: 5px;
-    font-weight: bold;
-
+    text-align: center;
 }
 
 #increase-btn-dani, #increase-btn-zsani {
-    background-color: darkgreen;
+    background-color: var(--green-btn-colour);
+    font-family: MainFiatFont;
     color: white;
     font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 100px;
+    font-size: 1.2em;
+    width: 80px;
+    cursor: pointer;
 }
 
 #decrease-btn-dani, #decrease-btn-zsani {
-    background-color: darkred;
+    background-color: var(--red-btn-colour);
+    font-family: MainFiatFont;
     color: white;
     font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 100px;
+    font-size: 1.2em;
+    width: 80px;
+    cursor: pointer;
 }
 
-#reset-btn{
-    background-color: lightskyblue;
-    color: black;
-    font-weight: bold;
+#increase-btn-dani:hover, #increase-btn-zsani:hover{
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+#increase-btn-dani:focus, #increase-btn-zsani:focus{
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.5);
+}
 
-/* #point-block1, #point-block2{
-    background-color: aqua;
-    max-width: fit-content;
-    display: inline;
-} */
+#decrease-btn-dani:hover, #decrease-btn-zsani:hover{
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#decrease-btn-dani:focus, #decrease-btn-zsani:focus{
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.reset-btn-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.reset-btn{
+    padding: 15px;
+    width: 200px;
+    background: var(--teal-colour);
+    font-family: MainFiatFont;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 1.2em;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.reset-btn:hover{
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.reset-btn:focus{
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.5);
+}

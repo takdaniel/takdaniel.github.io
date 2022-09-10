@@ -10,33 +10,33 @@
 </head>
 
 <body>
-    <h1>Bohócautó Verseny pontjai</h1>
-    <div id="point-block1">
-        <table align="center">
-            <tr>
-                <td>
-                    <h2 id="dani">Dani</h2>
-                    <button id="increase-btn-dani">+1</button>
-                    <button id="decrease-btn-dani" onclick="decreaseDaniPoints()">-1</button> 
-                </td>
-                <td>
-                    <h2 id="zsani">Zsani</h2>
-                    <button id="increase-btn-zsani">+1</button>
-                    <button id="decrease-btn-zsani" onclick="decreaseZsaniPoints()">-1</button> 
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h2 id="match-el">Jelenlegi állás: </h2>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h2 id="winner-el"></h2>
-                    <button id="reset-btn">Újrakezdés</button>
-                </td>
-            </tr>
-        </table>
+    <div class="content">
+        <div class="title-wrapper">
+            <h1 class="title">Bohócautó Verseny pontjai</h1>
+        </div>
+        <div class="img-wrapper">
+            <img src="fiat500.jpg" alt="fiat500">
+            <h3>A legbohócabb autó</h3>
+        </div>
+
+        <div id="point-block1" class="point-block1">
+            <div class="dani-main">
+                <h2 id="dani">Dani</h2>
+                <button id="increase-btn-dani">+1</button>
+                <button id="decrease-btn-dani">-1</button>
+            </div>
+            <div class="zsani-main">
+                <h2 id="zsani">Zsani</h2>
+                <button id="increase-btn-zsani">+1</button>
+                <button id="decrease-btn-zsani">-1</button>
+            </div>
+        </div>
+
+            <h2 id="match-el">Jelenlegi állás: </h2>
+            <h2 id="winner-el"></h2>
+           <div class="reset-btn-wrapper">
+               <button id="reset-btn" class="reset-btn">Újrakezdés</button>
+           </div>
     </div>
     <script src="index.js"></script>
 </body>
