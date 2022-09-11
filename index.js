@@ -7,7 +7,11 @@ const winnerEl = document.getElementById("winner-el")
 const zsaniPrize = ["valamilyen kaja", "egy masszázs", "egy turizás", "egy üveg kóla", "egy doboz heets", "fejmasszázs", "2 doboz energiaital"]
 const daniPrize = ["szopás", "ciciszex", "popószex", "masszázs", "egy doboz cigi", "egy üveg kóla", "footjob", "2 doboz energiaital"]
 const resetBtn = document.getElementById("reset-btn")
-
+const ruleInput = document.getElementById("rule-input")
+const ruleBtn = document.getElementById("rule-btn")
+const ruleEl = document.getElementById("rules-render")
+const olEl = document.getElementById("ol-el")
+const deleteBtn = document.getElementById("delete-btn")
 
 
 let daniPoints = 0
@@ -75,11 +79,47 @@ if (zsaniPoints === 20) {
 }
 
 resetBtn.addEventListener('click', function(){
-    localStorage.clear()
+    localStorage.removeItem("zsaniPontok")
+    localStorage.removeItem("daniPontok")
     window.location.reload()
     matchEl.innerHTML = `Jelenlegi állás: ${daniPoints} - ${zsaniPoints} <br> ${message}`
     daniMinus.disabled = false
     daniPlus.disabled = false
     zsaniMinus.disabled = false
     zsaniPlus.disabled = false
+})
+
+/* rules */
+
+let rules = []
+let rulesLS = JSON.parse(localStorage.getItem("szabályok"))
+
+if (rulesLS){
+    rules = rulesLS
+    renderRules()
+}
+
+ruleBtn.addEventListener('click', function(){
+    rules.push(ruleInput.value)
+    localStorage.setItem("szabályok", JSON.stringify(rules))
+    ruleInput.value = ""
+    renderRules()
+} )
+
+
+function renderRules (){
+    let renderableRule = ""
+    for (let i = 0; i < rules.length; i++){
+        renderableRule += `
+        <li>
+        ${rules[i]} 
+        </li>
+        `
+    }
+    olEl.innerHTML = renderableRule
+}
+
+deleteBtn.addEventListener('dblclick', function(){
+    localStorage.removeItem("szabályok")
+    window.location.reload()
 })

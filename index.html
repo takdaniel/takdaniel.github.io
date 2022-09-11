@@ -35,7 +35,20 @@
             <h2 id="match-el">Jelenlegi állás: </h2>
             <h2 id="winner-el"></h2>
            <div class="reset-btn-wrapper">
-               <button id="reset-btn" class="reset-btn">Újrakezdés</button>
+               <button id="reset-btn" class="blue-btn">Újrakezdés</button>
+           </div>
+           <div class="rules">
+            <div class="rules-input">
+                <h2>Szabályzat</h2>
+                <input type="text" class="rule-input" id="rule-input" placeholder="Kezdj el gépelni...">
+                <div class="btn-wrapper">
+                    <button class="blue-btn" id="rule-btn">Hozzáadás</button>
+                    <button class="delete-btn" id="delete-btn">Összes törlése</button>
+                </div>
+            </div>
+            <div class="rules-table">
+                <ol id="ol-el" class="ol-el"></ol>
+            </div>
            </div>
     </div>
     <script src="index.js"></script>

@@ -2,6 +2,7 @@
     --green-btn-colour: #12c739; 
     --red-btn-colour: #c61a09;
     --teal-colour: #116c6e;
+    --matte-black: #28282B;
 }
 
 @font-face {
@@ -101,7 +102,7 @@ h2{
     margin-top: 50px;
 }
 
-.reset-btn{
+.blue-btn{
     padding: 15px;
     width: 200px;
     background: var(--teal-colour);
@@ -119,4 +120,69 @@ h2{
 
 .reset-btn:focus{
     box-shadow: 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.rules{
+    margin-top: 100px;
+}
+
+.rules-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rule-input{
+    width: 400px;
+    padding: 15px;
+    background-color: #dddddd;
+    border: 3px solid #fff;
+    border-radius: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rule-input::placeholder{
+    font-family: MainFiatFont;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: var(--matte-black);
+}
+
+#rule-btn{
+    width: 190px;
+    margin-right: 5px;
+}
+
+.ol-el{
+    display: block;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ol li{
+    padding: 8px 16px;
+    margin-top: 5px;
+    font-size: 1.2em;
+}
+
+.btn-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.delete-btn{
+    width: 190px;
+    margin-left: 5px;
+    padding: 15px;
+    background:var(--red-btn-colour);
+    font-family: MainFiatFont;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 1.2em;
+    border-radius: 30px;
+    cursor: pointer;
 }
